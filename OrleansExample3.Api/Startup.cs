@@ -18,10 +18,10 @@ namespace OrleansExample3.Api
         {
             app.UseSwagger();
             app.UseSwaggerUI();
+            app.Map("/dashboard", x => x.UseOrleansDashboard());
 
             if (env.IsDevelopment())
             {
-                app.Map("/dashboard", x => x.UseOrleansDashboard());
             }
             else
             {
